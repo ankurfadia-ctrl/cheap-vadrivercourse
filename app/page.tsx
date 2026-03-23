@@ -3,203 +3,133 @@ import { SITE } from "@/lib/site-config";
 
 export default function HomePage() {
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        background: "#f8fafc",
-        color: "#0f172a",
-        fontFamily: "Arial, Helvetica, sans-serif",
-      }}
-    >
-      <header
-        style={{
-          background: "#ffffff",
-          borderBottom: "1px solid #e2e8f0",
-          padding: "20px 40px",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "1100px",
-            margin: "0 auto",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            gap: "20px",
-            flexWrap: "wrap",
-          }}
-        >
-          <div>
-            <div style={{ fontSize: "28px", fontWeight: 700 }}>
-              {SITE.brandName}
-            </div>
-            <div style={{ marginTop: "6px", color: "#475569" }}>
-              {SITE.tagline}
-            </div>
+    <main style={{ fontFamily: "Arial, Helvetica, sans-serif", background: "#f8fafc" }}>
+      
+      {/* HEADER */}
+      <header style={{ background: "#fff", borderBottom: "1px solid #e2e8f0", padding: "16px 32px" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", justifyContent: "space-between" }}>
+          <div style={{ fontWeight: 700, fontSize: "22px" }}>
+            Virginia Driver Improvement Course Guide
           </div>
-
-          <div style={{ display: "flex", gap: "18px", alignItems: "center" }}>
+          <div style={{ display: "flex", gap: "16px" }}>
             <Link href="/faq">FAQ</Link>
             <Link href="/cheap-virginia-driver-improvement-course">Guide</Link>
-            <a
-              href={SITE.primaryCtaUrl}
-              style={{
-                background: "#2563eb",
-                color: "#ffffff",
-                padding: "10px 18px",
-                borderRadius: "8px",
-                textDecoration: "none",
-                fontWeight: 600,
-              }}
-            >
-              {SITE.primaryCtaText}
-            </a>
           </div>
         </div>
       </header>
 
-      <section style={{ padding: "60px 40px" }}>
-        <div
+      {/* HERO */}
+      <section style={{ padding: "60px 30px", maxWidth: "1100px", margin: "0 auto" }}>
+        <h1 style={{ fontSize: "42px", fontWeight: 700 }}>
+          Virginia Driver Improvement Course (Online & Court Approved)
+        </h1>
+
+        <p style={{ marginTop: "16px", fontSize: "18px", lineHeight: 1.8, color: "#475569" }}>
+          Compare Virginia driver improvement course options, including online and court-approved programs.
+          Learn how the course works, what to expect, and choose the best Virginia driver improvement course for your needs.
+        </p>
+
+        <p style={{ marginTop: "10px", fontSize: "14px", color: "#64748b" }}>
+          Information for Virginia drivers seeking DMV-approved and court-accepted driver improvement courses.
+        </p>
+
+        <a
+          href={SITE.primaryCtaUrl}
           style={{
-            maxWidth: "1100px",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "1.2fr 1fr",
-            gap: "32px",
+            display: "inline-block",
+            marginTop: "24px",
+            background: "#2563eb",
+            color: "#fff",
+            padding: "14px 24px",
+            borderRadius: "8px",
+            fontWeight: 700,
+            textDecoration: "none"
           }}
         >
-          <div>
-            <div
-              style={{
-                display: "inline-block",
-                background: "#dbeafe",
-                color: "#1d4ed8",
-                padding: "8px 12px",
-                borderRadius: "999px",
-                fontSize: "14px",
-                fontWeight: 600,
-              }}
-            >
-              Virginia Driver Improvement Information
-            </div>
+          Start Virginia Driver Improvement Course
+        </a>
+      </section>
 
-            <h1
-              style={{
-                marginTop: "20px",
-                fontSize: "48px",
-                lineHeight: 1.1,
-                fontWeight: 700,
-              }}
-            >
-              Find a Virginia Driver Improvement Course That Fits Your Needs
-            </h1>
-
-            <p
-              style={{
-                marginTop: "20px",
-                fontSize: "18px",
-                lineHeight: 1.7,
-                color: "#475569",
-                maxWidth: "700px",
-              }}
-            >
-              Compare options, learn what to expect, and choose a Virginia
-              driver improvement course online with confidence.
-            </p>
-
-            <div style={{ marginTop: "28px", display: "flex", gap: "14px" }}>
-              <a
-                href={SITE.primaryCtaUrl}
-                style={{
-                  background: "#2563eb",
-                  color: "#ffffff",
-                  padding: "14px 22px",
-                  borderRadius: "10px",
-                  textDecoration: "none",
-                  fontWeight: 700,
-                }}
-              >
-                {SITE.primaryCtaText}
-              </a>
-
-              <Link
-                href="/cheap-virginia-driver-improvement-course"
-                style={{
-                  border: "1px solid #cbd5e1",
-                  background: "#ffffff",
-                  color: "#0f172a",
-                  padding: "14px 22px",
-                  borderRadius: "10px",
-                  textDecoration: "none",
-                  fontWeight: 700,
-                }}
-              >
-                Read the Guide
-              </Link>
-            </div>
+      {/* RECOMMENDED */}
+      <section style={{ padding: "40px 30px", maxWidth: "1100px", margin: "0 auto" }}>
+        <div style={{ background: "#fff", padding: "30px", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+          <div style={{ color: "#2563eb", fontWeight: 700, fontSize: "14px" }}>
+            RECOMMENDED OPTION
           </div>
 
-          <div
+          <h2 style={{ fontSize: "26px", marginTop: "10px" }}>
+            {SITE.ownCourse.name}
+          </h2>
+
+          <p style={{ marginTop: "10px", color: "#475569" }}>
+            {SITE.ownCourse.description}
+          </p>
+
+          <div style={{ fontSize: "32px", marginTop: "16px", fontWeight: 700 }}>
+            {SITE.ownCourse.priceDisplay}
+          </div>
+
+          <ul style={{ marginTop: "16px" }}>
+            {SITE.ownCourse.bullets.map((b) => (
+              <li key={b}>• {b}</li>
+            ))}
+          </ul>
+
+          <a
+            href={SITE.primaryCtaUrl}
             style={{
-              background: "#ffffff",
-              border: "1px solid #e2e8f0",
-              borderRadius: "18px",
-              padding: "28px",
-              boxShadow: "0 1px 4px rgba(0,0,0,0.06)",
+              display: "inline-block",
+              marginTop: "20px",
+              background: "#2563eb",
+              color: "#fff",
+              padding: "12px 20px",
+              borderRadius: "8px",
+              textDecoration: "none",
+              fontWeight: 700
             }}
           >
-            <div
-              style={{
-                color: "#1d4ed8",
-                fontSize: "13px",
-                fontWeight: 700,
-                textTransform: "uppercase",
-                letterSpacing: "0.06em",
-              }}
-            >
-              Recommended Option
-            </div>
-
-            <h2 style={{ marginTop: "12px", fontSize: "30px", fontWeight: 700 }}>
-              {SITE.ownCourse.name}
-            </h2>
-
-            <p style={{ marginTop: "12px", color: "#475569", lineHeight: 1.7 }}>
-              {SITE.ownCourse.description}
-            </p>
-
-            <div style={{ marginTop: "22px", fontSize: "38px", fontWeight: 700 }}>
-              {SITE.ownCourse.priceDisplay}
-            </div>
-
-            <div style={{ marginTop: "8px", color: "#64748b", fontSize: "14px" }}>
-              {SITE.ownCourse.subtext}
-            </div>
-
-            <ul style={{ marginTop: "22px", paddingLeft: "20px", lineHeight: 1.9 }}>
-              {SITE.ownCourse.bullets.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-
-            <a
-              href={SITE.primaryCtaUrl}
-              style={{
-                display: "inline-block",
-                marginTop: "24px",
-                background: "#2563eb",
-                color: "#ffffff",
-                padding: "14px 22px",
-                borderRadius: "10px",
-                textDecoration: "none",
-                fontWeight: 700,
-              }}
-            >
-              {SITE.primaryCtaText}
-            </a>
-          </div>
+            Enroll Now
+          </a>
         </div>
       </section>
+
+      {/* OTHER OPTIONS */}
+      <section style={{ padding: "40px 30px", maxWidth: "1100px", margin: "0 auto" }}>
+        <h2 style={{ fontSize: "26px" }}>
+          Other Virginia Driver Improvement Course Options
+        </h2>
+
+        <div style={{ marginTop: "20px" }}>
+          {SITE.otherOptions.map((o) => (
+            <a key={o.name} href={o.url} style={{
+              display: "block",
+              border: "1px solid #e2e8f0",
+              padding: "18px",
+              borderRadius: "10px",
+              marginBottom: "10px",
+              textDecoration: "none",
+              color: "#0f172a",
+              background: "#fff"
+            }}>
+              <div style={{ fontWeight: 700 }}>{o.name}</div>
+              <div style={{ color: "#475569", marginTop: "4px" }}>{o.description}</div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer style={{ padding: "30px", background: "#f1f5f9", marginTop: "40px" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", justifyContent: "space-between" }}>
+          <div>© Virginia Driver Course Guide</div>
+          <div style={{ display: "flex", gap: "12px" }}>
+            <Link href="/privacy-policy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
+            <Link href="/disclaimer">Disclaimer</Link>
+          </div>
+        </div>
+      </footer>
+
     </main>
   );
 }
