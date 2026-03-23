@@ -1,76 +1,60 @@
 export default function DisclaimerPage() {
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        background: "#f8fafc",
-        color: "#0f172a",
-        fontFamily: "Arial, Helvetica, sans-serif",
-        padding: "50px 30px",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "900px",
-          margin: "0 auto",
-          background: "#ffffff",
-          border: "1px solid #e2e8f0",
-          borderRadius: "16px",
-          padding: "36px",
-          boxShadow: "0 1px 4px rgba(0,0,0,0.05)",
-        }}
-      >
-        <div
-          style={{
-            color: "#2563eb",
-            fontSize: "13px",
-            fontWeight: 700,
-            textTransform: "uppercase",
-            letterSpacing: "0.06em",
-          }}
-        >
-          Legal Information
+    <>
+      <header style={{ background: "#fff", borderBottom: "1px solid #e2e8f0", padding: "16px 32px" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "16px" }}>
+          <a href="/" style={{ fontWeight: 700, fontSize: "22px", textDecoration: "none", color: "#0f172a" }}>
+            Virginia Driver Course Guide
+          </a>
+
+          <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+            <a href="/">Home</a>
+            <a href="/faq">FAQ</a>
+            <a href="/cheap-virginia-driver-improvement-course">Guide</a>
+          </div>
         </div>
+      </header>
 
-        <h1 style={{ marginTop: "12px", fontSize: "40px", fontWeight: 700 }}>
-          Disclaimer
-        </h1>
+      <main style={{ background: "#f8fafc", padding: "50px 30px", minHeight: "100vh", fontFamily: "Arial, Helvetica, sans-serif" }}>
+        <div style={{ maxWidth: "900px", margin: "0 auto", background: "#fff", padding: "36px", borderRadius: "16px", border: "1px solid #e2e8f0" }}>
+          <h1 style={{ fontSize: "36px", fontWeight: 700 }}>Disclaimer</h1>
 
-        <p style={{ marginTop: "18px", color: "#475569", lineHeight: 1.8 }}>
-          Virginia Driver Course Guide is an informational website. Course
-          availability, pricing, acceptance, support options, and provider
-          policies may vary and may change over time.
-        </p>
+          <p style={{ marginTop: "16px", color: "#475569", lineHeight: 1.8 }}>
+            Virginia Driver Course Guide is an informational website. Course availability, pricing, support options,
+            and provider policies may change over time.
+          </p>
 
-        <p style={{ marginTop: "18px", color: "#475569", lineHeight: 1.8 }}>
-          Visitors should review the current details, requirements, and policies
-          of any provider before purchasing a course or relying on course
-          information.
-        </p>
+          <h2 style={{ marginTop: "24px", fontSize: "22px", fontWeight: 700 }}>No Guarantee</h2>
+          <p style={{ color: "#475569", lineHeight: 1.8 }}>
+            We do not guarantee acceptance, approval, pricing, or outcomes from any third-party course provider.
+          </p>
 
-        <p style={{ marginTop: "18px", color: "#475569", lineHeight: 1.8 }}>
-          This website may receive compensation when visitors click certain
-          links or complete purchases through third-party providers.
-        </p>
+          <h2 style={{ marginTop: "24px", fontSize: "22px", fontWeight: 700 }}>Affiliate Disclosure</h2>
+          <p style={{ color: "#475569", lineHeight: 1.8 }}>
+            This website may receive compensation when visitors click links or purchase from third-party providers.
+          </p>
 
-        <p style={{ marginTop: "18px", color: "#475569", lineHeight: 1.8 }}>
-          Nothing on this website should be interpreted as legal advice,
-          regulatory advice, or a guarantee regarding court, DMV, or provider
-          acceptance.
-        </p>
-
-        <div
-          style={{
-            marginTop: "28px",
-            paddingTop: "18px",
-            borderTop: "1px solid #e2e8f0",
-            color: "#64748b",
-            fontSize: "14px",
-          }}
-        >
-          Last updated: January 1, 2026
+          <h2 style={{ marginTop: "24px", fontSize: "22px", fontWeight: 700 }}>External Providers</h2>
+          <p style={{ color: "#475569", lineHeight: 1.8 }}>
+            Visitors should always review the current information and policies of any provider before enrolling.
+          </p>
         </div>
-      </div>
-    </main>
+      </main>
+
+      <footer style={{ padding: "30px", background: "#f1f5f9", borderTop: "1px solid #e2e8f0" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "16px" }}>
+          <div style={{ color: "#64748b", fontSize: "14px" }}>
+            © {new Date().getFullYear()} Virginia Driver Course Guide. All rights reserved.
+          </div>
+
+          <div style={{ display: "flex", gap: "16px", fontSize: "14px", flexWrap: "wrap" }}>
+            <a href="/faq">FAQ</a>
+            <a href="/privacy-policy">Privacy</a>
+            <a href="/terms">Terms</a>
+            <a href="/disclaimer">Disclaimer</a>
+          </div>
+        </div>
+      </footer>
+    </>
   );
 }

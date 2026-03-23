@@ -120,15 +120,21 @@ export default function HomePage() {
 
       {/* FOOTER */}
       <footer style={{ padding: "30px", background: "#f1f5f9", marginTop: "40px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", justifyContent: "space-between" }}>
-          <div>© Virginia Driver Course Guide</div>
-          <div style={{ display: "flex", gap: "12px" }}>
-            <Link href="/privacy-policy">Privacy</Link>
-            <Link href="/terms">Terms</Link>
-            <Link href="/disclaimer">Disclaimer</Link>
-          </div>
-        </div>
-      </footer>
+  <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+    
+    <div style={{ color: "#64748b", fontSize: "14px" }}>
+      © {new Date().getFullYear()} Virginia Driver Course Guide. All rights reserved.
+    </div>
+
+    <div style={{ display: "flex", gap: "16px", fontSize: "14px" }}>
+      <Link href="/faq">FAQ</Link>
+      <Link href="/privacy-policy">Privacy</Link>
+      <Link href="/terms">Terms</Link>
+      <Link href="/disclaimer">Disclaimer</Link>
+    </div>
+
+  </div>
+</footer>
 
     </main>
   );

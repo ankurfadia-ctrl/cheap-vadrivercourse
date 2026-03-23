@@ -1,77 +1,66 @@
 export default function TermsPage() {
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        background: "#f8fafc",
-        color: "#0f172a",
-        fontFamily: "Arial, Helvetica, sans-serif",
-        padding: "50px 30px",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "900px",
-          margin: "0 auto",
-          background: "#ffffff",
-          border: "1px solid #e2e8f0",
-          borderRadius: "16px",
-          padding: "36px",
-          boxShadow: "0 1px 4px rgba(0,0,0,0.05)",
-        }}
-      >
-        <div
-          style={{
-            color: "#2563eb",
-            fontSize: "13px",
-            fontWeight: 700,
-            textTransform: "uppercase",
-            letterSpacing: "0.06em",
-          }}
-        >
-          Legal Information
+    <>
+      <header style={{ background: "#fff", borderBottom: "1px solid #e2e8f0", padding: "16px 32px" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "16px" }}>
+          
+          <a href="/" style={{ fontWeight: 700, fontSize: "22px", textDecoration: "none", color: "#0f172a" }}>
+            Virginia Driver Course Guide
+          </a>
+
+          <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+            <a href="/">Home</a>
+            <a href="/faq">FAQ</a>
+            <a href="/cheap-virginia-driver-improvement-course">Guide</a>
+          </div>
+
         </div>
+      </header>
 
-        <h1 style={{ marginTop: "12px", fontSize: "40px", fontWeight: 700 }}>
-          Terms and Conditions
-        </h1>
+      <main style={{ background: "#f8fafc", padding: "50px 30px", minHeight: "100vh", fontFamily: "Arial, Helvetica, sans-serif" }}>
+        <div style={{ maxWidth: "900px", margin: "0 auto", background: "#fff", padding: "36px", borderRadius: "16px", border: "1px solid #e2e8f0" }}>
+          
+          <h1 style={{ fontSize: "36px", fontWeight: 700 }}>Terms and Conditions</h1>
 
-        <p style={{ marginTop: "18px", color: "#475569", lineHeight: 1.8 }}>
-          By using this website, you agree to use it only for lawful purposes.
-          Information on this website is provided for general informational
-          purposes and may be changed, updated, or removed at any time without
-          notice.
-        </p>
+          <p style={{ marginTop: "16px", color: "#475569", lineHeight: 1.8 }}>
+            By using this website, you agree to use it for lawful purposes only.
+            Information is provided for general informational purposes and may change at any time.
+          </p>
 
-        <p style={{ marginTop: "18px", color: "#475569", lineHeight: 1.8 }}>
-          This website may contain links to third-party providers or external
-          websites. We are not responsible for the content, pricing,
-          availability, policies, or services of third-party websites.
-        </p>
+          <h2 style={{ marginTop: "24px", fontSize: "22px", fontWeight: 700 }}>Use of Website</h2>
+          <p style={{ color: "#475569", lineHeight: 1.8 }}>
+            You agree not to misuse this website or rely on it as legal or professional advice.
+          </p>
 
-        <p style={{ marginTop: "18px", color: "#475569", lineHeight: 1.8 }}>
-          Use of this website does not create any professional, legal, or
-          advisory relationship. Visitors are responsible for reviewing current
-          provider information before making any purchase decision.
-        </p>
+          <h2 style={{ marginTop: "24px", fontSize: "22px", fontWeight: 700 }}>Third-Party Providers</h2>
+          <p style={{ color: "#475569", lineHeight: 1.8 }}>
+            This site may link to third-party providers. We are not responsible for their services, pricing, or policies.
+          </p>
 
-        <p style={{ marginTop: "18px", color: "#475569", lineHeight: 1.8 }}>
-          We reserve the right to modify these Terms and Conditions at any time.
-          Continued use of the website means you accept the current version.
-        </p>
+          <h2 style={{ marginTop: "24px", fontSize: "22px", fontWeight: 700 }}>Changes</h2>
+          <p style={{ color: "#475569", lineHeight: 1.8 }}>
+            We may update these terms at any time without notice.
+          </p>
 
-        <div
-          style={{
-            marginTop: "28px",
-            paddingTop: "18px",
-            borderTop: "1px solid #e2e8f0",
-            color: "#64748b",
-            fontSize: "14px",
-          }}
-        >
-          Last updated: January 1, 2026
         </div>
-      </div>
-    </main>
+      </main>
+
+      <footer style={{ padding: "30px", background: "#f1f5f9", borderTop: "1px solid #e2e8f0" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "16px" }}>
+          
+          <div style={{ color: "#64748b", fontSize: "14px" }}>
+            © {new Date().getFullYear()} Virginia Driver Course Guide. All rights reserved.
+          </div>
+
+          <div style={{ display: "flex", gap: "16px", fontSize: "14px", flexWrap: "wrap" }}>
+            <a href="/faq">FAQ</a>
+            <a href="/privacy-policy">Privacy</a>
+            <a href="/terms">Terms</a>
+            <a href="/disclaimer">Disclaimer</a>
+          </div>
+
+        </div>
+      </footer>
+    </>
   );
 }
